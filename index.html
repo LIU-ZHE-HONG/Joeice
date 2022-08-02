@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!---------------- Google Fonts ---------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+
+    <!---------------- fontawsome ---------------->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
+        integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous" />
+
+    <!---------------- AOS ---------------->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!---------------- css ---------------->
+    <link rel="stylesheet" href="css/index.css">
+    <title>Joeice</title>
+</head>
+
+<body>
+    <!------------- 頁首 ------------->
+    <header>
+        <!------------- 電腦導覽列 ------------->
+        <nav class="navbar">
+            <a href="index.html">
+                <img class="logo" src="material/logo.png" alt="">
+            </a>
+            <ul>
+                <li>
+                    <a href="about.html">關於我們</a>
+                </li>
+
+                <li>
+                    <a href="product.html">商品專區</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">聯絡我們</a>
+                </li>
+
+                <li>
+                    <a href="shop.html">
+                        <i class="fa-solid fa-cart-shopping fa-bounce"></i>
+                        <span>0</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#open" class="lightbox_btn"><i class="fa-solid fa-user"></i></a>
+                </li>
+            </ul>
+        </nav>
+
+        <!------------- 手機導覽列 ------------->
+        <div class="rwd">
+            <div class="ham_btn">
+                <button type="button" class="hamburger_icon">
+                    <span class="hamburger top"></span>
+                    <span class="hamburger middle"></span>
+                    <span class="hamburger bottom"></span>
+                </button>
+            </div>
+            <a href="index.html"><img src="material/logo.png" alt=""></a>
+        </div>
+        <div class="mask_trigger"></div>
+        <div class="hamburger_menu">
+            <ul>
+                <li>
+                    <a href="about.html">關於我們</a>
+                </li>
+
+                <li>
+                    <a href="product.html">商品專區</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">聯絡我們</a>
+                </li>
+
+                <li>
+                    <a href="shop.html">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>0</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#open" class="lightbox_btn"><i class="fa-solid fa-user"></i></a>
+                </li>
+            </ul>
+        </div>
+
+        <!--------------- 會員彈窗 --------------->
+        <div class="overlay" id="open">
+            <div class="other"></div>
+            <div class="overlay_box">
+                <form action="#" method="#" class="login_form">
+                    <div>
+                        <label>帳號:</label>
+                        <input type="text" required>
+                    </div>
+                    <div>
+                        <label>密碼:</label>
+                        <input type="password" required>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">記住我</label>
+                        <em>忘記密碼</em>
+                    </div>
+                    <div>
+                        <button type="button">Log in with <i class="fa-brands fa-facebook"></i></button><br>
+                        <button type="button">Log in with <i class="fa-brands fa-google"></i></button><br>
+                        <button type="button">Log in</button>
+                    </div>
+                </form>
+
+                <form action="#" method="#" class="signup_form">
+                    <div class="flex">
+                        <label>信箱:</label>
+                        <input type="email" required>
+                    </div>
+                    <div class="flex">
+                        <label>密碼:</label>
+                        <input type="password" required>
+                    </div>
+                    <div class="flex">
+                        <label>確認密碼:</label>
+                        <input type="password" required>
+                    </div>
+                    <div>
+                        <button type="button">Sign up with <i class="fa-brands fa-facebook"></i></button><br>
+                        <button type="button">Sign up with <i class="fa-brands fa-google"></i></button><br>
+                        <button type="button">Sign up</button>
+                    </div>
+                </form>
+                <div class="close_btn overlay_close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <button type="button" class="login">登入</button>
+                <button type="button" class="signup">註冊</button>
+            </div>
+        </div>
+    </header>
+
+    <!--------------- 影片 --------------->
+    <section class="icecream">
+        <video class="main_video" autoplay muted loop playsinline>
+            <source src="material/icecream_video.mp4" type="video/mp4">
+        </video>
+        <div class="scroll_box">
+            <span>Scroll</span>
+            <i class="fa-solid fa-angles-down"></i>
+        </div>
+    </section>
+
+    <!--------------- 熱銷冰品 --------------->
+    <section class="new">
+        <h1 data-aos="zoom-in">熱銷冰品</h1>
+        <ol>
+            <li>
+                <p data-aos="fade-up" data-aos-delay="500"><mark>愛文芒果冰</mark></p>
+                <img src="material/mango.jpg" alt="" data-aos="fade-left" data-aos-delay="500">
+            </li>
+            <li>
+                <img src="material/red-bean-matcha.jpg" alt="" data-aos="flip-left" data-aos-delay="500">
+                <p data-aos="slide-up"><mark>紅豆抹茶冰</mark></p>
+            </li>
+            <li>
+                <p data-aos="zoom-in-right"><mark>榛果黑芝麻雪花冰</mark></p>
+                <img src="material/sesame.jpg" alt="" data-aos="zoom-in-left">
+            </li>
+        </ol>
+    </section>
+
+    <!--------------- 部分商品圖 --------------->
+    <section class="ice_item" data-aos="zoom-in" data-aos-easing="ease-in-out-quart" data-aos-duration="2000"
+        data-aos-once="true">
+        <h1>部分商品圖</h1>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
+
+    <!--------------- 回到頂端按鈕 --------------->
+    <div class="back_to_top">
+        <span>TOP</span>
+        <i class="fa-solid fa-angles-up"></i>
+    </div>
+
+    <!--------------- 頁尾 --------------->
+    <footer>
+        <h2>Joeice</h2>
+        <div class="footer_content">
+            <div class="footer_text">
+                <div>
+                    <i class="fa-solid fa-map-location"></i>
+                    <span>新北市三重區和平街32號</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <span>(02)2977-7777</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Joeice@gmail.com</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-clock"></i>
+                    <span>早上11點~下午5點</span>
+                </div>
+            </div>
+
+            <!--------------- 地圖 --------------->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.1544533427546!2d121.49947571475944!3d25.062753643292666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a922a474b8e3%3A0x7f680abd4b3b71eb!2zMjQx5paw5YyX5biC5LiJ6YeN5Y2A5ZKM5bmz6KGXMzLomZ8!5e0!3m2!1szh-TW!2stw!4v1657293848301!5m2!1szh-TW!2stw"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p>本網站單純練習切版用，並無任何商業用途</p>
+    </footer>
+    <!--------------- jquery --------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!---------------- AOS ---------------->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!---------------- js ---------------->
+    <script src="js/main.js"></script>
+    <script>
+        //AOS初始化
+        AOS.init({
+            duration: 1000
+        });
+    </script>
+</body>
+
+</html>

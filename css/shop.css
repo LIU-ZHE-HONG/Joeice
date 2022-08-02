@@ -1,0 +1,179 @@
+@import url("common/reset.css");
+@import url("common/all.css");
+@import url("common/header-footer.css");
+
+/*------------- 商品資訊 -------------*/
+section {
+    margin-top: 100px;
+}
+
+section .container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+section .container .product_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--h3-color);
+    color: white;
+}
+
+/*header寬度平均分4等份*/
+section .container .product_header p {
+    width: 25%;
+    text-align: center;
+}
+
+section .container .all_products .product_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .container .all_products .product_content .products {
+    width: 100%;
+    padding: 15px 0;
+}
+
+section .container .all_products .product_content .products img {
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+section .container .all_products .product_content .products p {
+    text-align: center;
+    margin-top: 5px;
+}
+
+/*偽元素*/
+section .container .all_products .product_content .price span::before, section .container .all_products .product_content .money p::before{
+    content: "NT$";
+}
+
+/*點擊數量箭頭樣式*/
+section .container .all_products .product_content .quantity img{
+    width: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+/*讓總計的文字和fontawsome左右排*/
+section .container .all_products .product_content .money {
+    display: inline-flex;
+    font-size: 0;
+}
+
+/*總計文字拿走1等份的剩餘空間*/
+section .container .all_products .product_content .money p {
+    flex-grow: 1;
+    font-size: 17px;
+}
+
+section .container .all_products .product_content .money i {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+section .container .all_products .product_content .price,
+section .container .all_products .product_content .quantity,
+section .container .all_products .product_content .money {
+    width: 100%;
+    text-align: center;
+}
+
+/*購物車下方那條虛線*/
+section .container hr{
+    border: 0;
+    border-bottom: 1px dashed var(--p-color);
+}
+
+section .container .total{
+    text-align: right;
+}
+
+section .container .total span{
+    margin-right: 5px;
+}
+
+section .container .total b{
+    color: red;
+}
+
+/*------------- 表單 -------------*/
+section .buyer_info {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+section .buyer_info .buyer_info_title {
+    background-color: var(--h3-color);
+    color: white;
+    padding: 5px 0;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 24px;
+}
+
+section .buyer_info ul {
+    border: 3px dashed var(--h3-color);
+    margin: 20px auto 0;
+    width: 50%;
+    padding: 10px;
+}
+
+section .buyer_info ul li {
+    color: var(--p-color);
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+section .buyer_info ul li input {
+    border: 0;
+    border-bottom: 1px solid var(--h3-color);
+    padding: 10px;
+    background: none;
+    outline: none;
+    width: 60%;
+    font-size: 18px;
+}
+
+section .buyer_info ul li textarea {
+    width: 60%;
+    resize: none;
+    height: 200px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+section .buyer_btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+}
+
+section .buyer_btn a {
+    color: var(--h3-color);
+    font-size: 20px;
+    margin-top: 30px;
+    font-weight: bold;
+    display: block;
+    transition: color .5s;
+}
+
+section .buyer_btn a:hover {
+    color: yellow;
+}
+
+@media (max-width:575.98px){
+    /*改姓名欄位placeholder樣式*/
+    section .buyer_info ul li input.user-name::placeholder{
+       font-size: 14px;
+       color: red;
+       text-align: center;
+    }
+}

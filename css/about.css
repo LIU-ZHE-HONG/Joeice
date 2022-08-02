@@ -1,0 +1,136 @@
+@import url("common/reset.css");
+@import url("common/all.css");
+@import url("common/header-footer.css");
+
+/*------------- 中間區塊 -------------*/
+.taro-ball,
+.pearl,
+.water {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.taro-ball .ingredients,
+.water .clean {
+    margin-right: 30px;
+}
+
+.taro-ball .ingredients h1,
+.pearl .ingredients2 h1,
+.water .clean h1 {
+    margin: 20px auto 0;
+}
+
+/*滑鼠游標選取文字的樣式*/
+.taro-ball .ingredients p::selection,
+.pearl .ingredients2 p::selection,
+.water .clean p::selection {
+    background-color: yellow;
+    color: red;
+}
+
+.taro-ball img,
+.pearl img {
+    margin-top: 50px;
+}
+
+/*設定order，讓區塊和文字的順序對調*/
+.pearl .ingredients2 {
+    order: 1;
+    margin-left: 30px;
+}
+
+.water img {
+    width: 300px;
+    margin-top: 50px;
+}
+
+/*------------- 合作夥伴 -------------*/
+figure h1 {
+    margin-bottom: 30px;
+}
+
+figure .cooperation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+figure .cooperation a {
+    margin: 0 50px 50px;
+}
+
+figure .cooperation a b {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+figure .cooperation a img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 1s;
+}
+
+figure .cooperation a img:hover {
+    transform: scale(.8);
+}
+
+@media (max-width:767.98px) {
+    figure .cooperation{
+        flex-direction: column;
+    }
+
+    figure .cooperation a img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
+/*------------- 回到頂端 -------------*/
+.back_to_top {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 70px;
+    height: 70px;
+    background: none;
+    background-color: hsla(24, 55%, 36%, .3);
+    color: yellow;
+    border-radius: 50%;
+    line-height: 1.6;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    animation: top 1s linear infinite;
+}
+
+.back_to_top span {
+    display: block;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.back_to_top i.fa-angles-up {
+    font-size: 20px;
+}
+
+@keyframes top {
+    0% {
+        bottom: 20px;
+    }
+
+    50% {
+        bottom: 30px;
+    }
+
+    100% {
+        bottom: 20px;
+    }
+}

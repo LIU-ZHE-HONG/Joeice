@@ -1,0 +1,159 @@
+@import url("common/reset.css");
+@import url("common/all.css");
+@import url("common/header-footer.css");
+
+/*------------- 表單 -------------*/
+section h3 {
+    margin-top: 100px;
+}
+
+section form ul {
+    width: 500px;
+    margin: 20px auto;
+}
+
+section form ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/*取消圓點的flex*/
+section form ul li:nth-child(2) input {
+    flex: none;
+}
+
+section form ul li label {
+    font-size: 18px;
+    flex-basis: 120px;
+    text-align: right;
+    color: var(--p-color);
+}
+
+/*radio那行的剩餘空間會自動跟項目切齊*/
+section form ul li label:nth-of-type(2),
+section form ul li label:nth-of-type(3) {
+    flex-basis: auto;
+    color: #0000cd;
+}
+
+section form ul li label:nth-of-type(3) {
+    color: #ff1493;
+}
+
+/*表單樣式排版*/
+section form ul li input,
+section form ul li textarea,
+section form ul li button {
+    font-size: 18px;
+    padding: 8px 6px;
+    margin-left: 20px;
+    flex-grow: 1;
+    outline-color: red;
+}
+
+/*textarea的label向上對齊*/
+section form ul li:nth-child(5) label {
+    align-self: flex-start;
+}
+
+section form ul li textarea {
+    resize: none;
+    outline: none;
+}
+
+section form ul li button {
+    border: 0;
+    cursor: pointer;
+    background-color: #eee;
+    color: var(--p-color);
+    outline: none;
+    box-shadow: 2px 2px 5px black;
+}
+
+section form ul li button:hover {
+    background-color: #FFD700;
+    color: lightyellow;
+}
+
+@media (max-width:575.98px) {
+    section form ul {
+        width: 100%;
+    }
+
+    section form ul li label {
+        text-align: center;
+    }
+
+    section form ul li input,
+    section form ul li textarea,
+    section form ul li button {
+        margin: 0 20px 0 5px;
+    }
+
+    section form ul li textarea{
+        width: 50%;
+    }
+
+    section form ul li:nth-child(5) label {
+        align-self: auto;
+    }
+}
+
+/*------------- 常見問題(手風琴) -------------*/
+section ol.list{
+    margin-top: 20px;
+}
+
+section ol.list li{
+    width: 70%;
+    margin: 0 auto 30px;
+}
+
+section ol.list li .link_title{
+    color: yellow;
+    background-color: var(--h3-color);
+    box-shadow: 2px 2px 8px 1px yellow;
+    border-radius: 30px;
+    padding: 8px;
+    font-size: 20px;
+}
+
+/*float要加的偽元素*/
+section ol.list li .link_title::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*+按鈕和-按鈕*/
+section ol.list li button.switch_btn{
+    float: right;
+    background: none;
+    border: 0;
+    color: #FFD700;
+    font-size: 30px;
+}
+
+/*沒顯示內容，-按鈕隱藏*/
+section ol.list li button.switch_btn span.-minus{
+    display: none;
+}
+
+/*內容樣式一開始隱藏，點擊+按鈕滑出*/
+section ol.list li .inner_block{
+    color: red;
+    margin-top: 8px;
+    padding: 8px;
+    display: none;
+}
+
+/*在有class是-on時內容出現，+按鈕消失*/
+section ol.list li.-on .link_title button.switch_btn span.-plus{
+    display: none;
+}
+
+/*在有class是-on時內容出現，-按鈕出現*/
+section ol.list li.-on .link_title button.switch_btn span.-minus{
+    display: block;
+}

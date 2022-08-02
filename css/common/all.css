@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    scroll-behavior: smooth;
+    overflow-x: hidden; /*在套用AOS套件的某些效果，才不會出現水平捲軸*/
+}
+
+/*點a連結會跳轉到該區塊，而且不會被header遮到*/
+:target::before{
+    content: '';
+    display: block;
+    height: 100px;
+}
+
+body {
+    background-image: url("../../material/body_bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Noto Sans TC', sans-serif, '微軟正黑體', Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    --p-color: #2E1F27;
+    --h1-color: #6F4020;
+    --h2-color: #7E4925;
+    --h3-color: #8E5229;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1{
+    font-size: 30px;
+    color: var(--h1-color);
+    text-align: center;
+}
+
+h2{
+    font-size: 26px;
+    color: var(--h2-color);
+    text-align: center;
+}
+
+h3{
+    font-size: 24px;
+    color: var(--h3-color);
+    text-align: center;
+}
+
+a {
+    color: var(--p-color);
+    text-decoration: none;
+}
+
+/*網頁捲軸寬度*/
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+/*網頁捲軸背景顏色*/
+::-webkit-scrollbar-track{
+    border-radius: 10px;
+    box-shadow: 0 0 3px var(--p-color) inset;
+}
+
+/*網頁捲軸把手顏色*/
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: yellow;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #ADFF2F;
+}

@@ -1,0 +1,522 @@
+/*------------- 頁首 -------------*/
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #DDC055;
+    z-index: 2;
+}
+
+/*------------- 電腦導覽列樣式 -------------*/
+header nav.navbar {
+    display: flex;
+    align-items: center;
+}
+
+header nav.navbar a img.logo {
+    padding: 3px;
+    height: 70px;
+}
+
+header nav.navbar ul {
+    display: flex;
+    margin-left: auto;
+    flex-basis: 450px;
+    align-items: center;
+}
+
+header nav.navbar ul li {
+    flex-grow: 1;
+    position: relative;
+}
+
+/*後面倒數兩個icon排版設定*/
+header nav.navbar ul li:nth-last-child(-n+2) {
+    flex-grow: 0;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+/*後面倒數兩個icon取消transition*/
+header nav.navbar ul li:nth-last-child(-n+2) a:hover::after {
+    width: 0;
+}
+
+/*fontawsome*/
+header nav.navbar ul li a i.fa-solid {
+    color: var(--p-color);
+    font-size: 30px;
+}
+
+/*購物商品的數字*/
+header nav.navbar ul li a span {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--h3-color);
+    color: yellow;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+header nav.navbar ul li a {
+    display: block;
+    text-align: center;
+    position: relative;
+}
+
+header nav.navbar ul li a:hover {
+    color: #FBF0EF;
+}
+
+/*a連結下方那條線*/
+header nav.navbar ul li a::after {
+    content: "";
+    display: block;
+    background-color: #FBF0EF;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    margin: auto;
+    transition: width .6s;
+}
+
+/*hover時，寬度改變*/
+header nav.navbar ul li a:hover::after {
+    width: 55%;
+}
+
+/*代表現在在哪一頁*/
+header nav.navbar ul li a.-on,
+header nav.navbar ul li a i.-on {
+    color: yellow;
+}
+
+/*下面的線跟在哪頁的顏色一樣*/
+header nav.navbar ul li a.-on::after {
+    background-color: yellow;
+}
+
+/*------------- 手機導覽列樣式 -------------*/
+/*手機導覽列在電腦隱藏*/
+header .rwd {
+    display: none;
+}
+
+/*手機漢堡按鈕選單在電腦隱藏*/
+header .hamburger_menu {
+    display: none;
+}
+
+@media (max-width:767.98px) {
+    /*電腦導覽列隱藏*/
+    header nav.navbar {
+        display: none;
+    }
+
+    /*手機導覽列在手機出現*/
+    header .rwd {
+        display: flex;
+        background-color: #DDC055;
+        align-items: center;
+    }
+
+    /*漢堡按鈕樣式*/
+    header .rwd .ham_btn button.hamburger_icon {
+        display: block;
+        width: 50px;
+        height: 50px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: relative;
+    }
+
+    /*漢堡按鈕線*/
+    header .rwd .ham_btn button.hamburger_icon span.hamburger {
+        width: 50%;
+        height: 1px;
+        background-color: #452C0C;
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transition: top .3s .3s ease-in-out, transform .2s;
+    }
+
+    /*漢堡按鈕上方線*/
+    header .rwd .ham_btn button.hamburger_icon span.top {
+        top: -20px;
+    }
+
+    /*漢堡按鈕下方線*/
+    header .rwd .ham_btn button.hamburger_icon span.bottom {
+        top: 20px;
+    }
+
+    /*------------- 漢堡按鈕在有class是-on時，從三條線變叉叉 -------------*/
+    /*漢堡按鈕上方線動畫效果*/
+    header .rwd .ham_btn button.hamburger_icon.-on span.top {
+        transform: rotate(45deg);
+        top: 0;
+        transition: top .3s ease-in-out, transform .2s .3s;
+    }
+
+    /*漢堡按鈕中間線變透明*/
+    header .rwd .ham_btn button.hamburger_icon.-on span.middle {
+        background: transparent;
+    }
+
+    /*漢堡按鈕下方線動畫效果*/
+    header .rwd .ham_btn button.hamburger_icon.-on span.bottom {
+        transform: rotate(-45deg);
+        top: 0;
+        transition: top .3s ease-in-out, transform .2s .3s;
+    }
+
+    header .rwd a {
+        display: block;
+        padding: 35px;
+    }
+
+    /*圖片置中(暴力法)*/
+    header .rwd a img {
+        display: block;
+        height: 70px;
+        padding: 3px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /*在點擊漢堡按鈕時，加上遮罩*/
+    header .mask{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: hsla(0, 0%, 0%, .6);
+        z-index: -1; /*沒加這行無法點漢堡按鈕*/
+    }
+
+    /*手機漢堡按鈕選單在手機出現*/
+    header .hamburger_menu {
+        display: block;
+    }
+
+    /*手機漢堡按鈕選單樣式*/
+    header .hamburger_menu ul {
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        text-align: center;
+        background-color: #4C2B05;
+        opacity: 0;
+        transition: max-height 1.3s, opacity 2s;
+    }
+
+    /*手機漢堡按鈕選單在有class是show_menu時出現*/
+    body.show_menu header .hamburger_menu ul {
+        max-height: 500px;
+        opacity: 1;
+        transition: max-height 1.3s, opacity 2s;
+    }
+
+    /*手機漢堡按鈕選單裡面的項目清單*/
+    header .hamburger_menu ul li {
+        margin: 30px 0 10px;
+        position: relative;
+    }
+
+    /*手機漢堡按鈕選單裡面的每個項目清單後面那條線*/
+    header .hamburger_menu ul li::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        border-bottom: 3.5px double white;
+        width: 85%;
+        transform: translateX(-50%);
+    }
+
+    /*手機漢堡按鈕選單裡面的倒數兩個項目(fontawsome)取消後面那條線*/
+    header .hamburger_menu ul li:nth-last-child(-n+2)::after{
+        display: none;
+    }
+
+    /*手機漢堡按鈕選單裡面的每個項目樣式*/
+    header .hamburger_menu ul li a {
+        display: block;
+        font-size: 20px;
+        color: #F5B700;
+    }
+
+    header .hamburger_menu ul li a:hover {
+        color: #FBF0EF;
+    }
+
+    /*手機漢堡按鈕選單裡面的倒數兩個項目(fontawsome)左右排*/
+    header .hamburger_menu ul li:nth-last-child(-n+2) {
+        display: inline-block;
+    }
+
+    /*fontawsome*/
+    header .hamburger_menu ul li a i.fa-solid {
+        color: #F5B700;
+        font-size: 30px;
+        margin: 0 5px;
+    }
+
+    /*購物商品的數字*/
+    header .hamburger_menu ul li a span {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: -10px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: var(--h3-color);
+        color: yellow;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+
+/*------------- 會員彈窗 -------------*/
+/*遮罩*/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: hsla(0, 0%, 0%, .7);
+    display: none;
+}
+
+/*點燈箱以外的區域，可以把燈箱關閉*/
+.overlay .other {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*燈箱樣式*/
+.overlay .overlay_box {
+    background-color: #FFEBAD;
+    width: 70%;
+    max-width: 330px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 5px yellow;
+    padding: 40px 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/*------------- 燈箱登入頁內容 -------------*/
+.overlay .overlay_box form.login_form {
+    border: 5px double #FCF6EE;
+    font-size: 14px;
+    width: 300px;
+    margin: 0 auto 10px;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: #F5B700;
+}
+
+.overlay .overlay_box form.login_form.-off {
+    display: none;
+}
+
+/*登入input欄位間距*/
+.overlay .overlay_box form.login_form div {
+    margin-bottom: 20px;
+}
+
+.overlay .overlay_box form.login_form label {
+    color: var(--p-color);
+}
+
+/*checkbox旁邊的字和忘記密碼*/
+.overlay .overlay_box form.login_form .checkbox label,
+.overlay .overlay_box form.login_form .checkbox em {
+    font-size: 12px
+}
+
+.overlay .overlay_box form.login_form .checkbox em {
+    color: red;
+    cursor: help;
+}
+
+.overlay .overlay_box form.login_form button {
+    width: 100px;
+    height: 30px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #FCF6EE;
+    color: var(--p-color);
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.overlay .overlay_box form.login_form button:hover {
+    background-color: #FFEBAD;
+}
+
+/*------------- 燈箱註冊頁內容 -------------*/
+.overlay .overlay_box form.signup_form {
+    border: 5px double #452C0C;
+    font-size: 14px;
+    width: 300px;
+    margin: 0 auto 10px;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: #F5B700;
+    display: none;
+}
+
+.overlay .overlay_box form.signup_form.-on {
+    display: block;
+}
+
+/*由於註冊頁的內容標籤長度不一樣，這裡才會用flex*/
+.overlay .overlay_box form.signup_form .flex {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.overlay .overlay_box form.signup_form .flex label {
+    flex-basis: 70px;
+    text-align: center;
+    color: var(--p-color);
+}
+
+.overlay .overlay_box form.signup_form button {
+    width: 100px;
+    height: 30px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #452C0C;
+    color: white;
+    margin: 5px 0;
+    padding: 1px;
+    cursor: pointer;
+}
+
+.overlay .overlay_box form.signup_form button:hover {
+    background-color: #FFEBAD;
+    color: var(--p-color);
+}
+
+/*------------- 叉叉按鈕 -------------*/
+.overlay .overlay_box .close_btn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.overlay .overlay_box button.login {
+    background-color: #FCF6EE;
+    color: var(--p-color);
+    padding: 5px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 14px;
+    width: 50px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: transform 1s linear;
+}
+
+.overlay .overlay_box button.signup {
+    background-color: #452C0C;
+    color: white;
+    padding: 5px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 14px;
+    width: 50px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: transform .5s ease-out;
+}
+
+.overlay .overlay_box button.login:hover,
+.overlay .overlay_box button.signup:hover {
+    transform: scale(1.3);
+    background-color: #F5B700;
+    text-shadow: 1px 1px 2px chocolate, -1px -1px 2px chocolate;
+}
+
+/*------------- 頁尾 -------------*/
+footer {
+    background-color: #DDC055;
+}
+
+footer .footer_content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer .footer_content .footer_text {
+    padding: 20px 0 0 20px;
+}
+
+footer .footer_content .footer_text>div {
+    padding-bottom: 10px;
+}
+
+footer .footer_content .footer_text i.fa-solid {
+    color: #FFFAD7;
+}
+
+footer p {
+    font-size: 14px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/*------------- 地圖 -------------*/
+iframe {
+    width: 500px;
+    height: 150px;
+    outline: 3px solid red;
+    margin: 20px 0 0 20px;
+}
+
+@media (max-width:767.98px) {
+    footer .footer_content .footer_text {
+        padding: 0;
+    }
+
+    iframe {
+        width: 50%;
+        height: 50%;
+        outline: none;
+        margin: 0;
+    }
+}
