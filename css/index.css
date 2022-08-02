@@ -30,7 +30,7 @@ section.icecream video.main_video {
 }
 
 /*------------- 提示向下滑樣式 -------------*/
-section.icecream .scroll_box{
+section.icecream .scroll_box {
     width: 50px;
     text-align: center;
     line-height: 1.6;
@@ -44,7 +44,7 @@ section.icecream .scroll_box{
     animation: down 1s ease-in-out infinite;
 }
 
-section.icecream .scroll_box i.fa-angles-down{
+section.icecream .scroll_box i.fa-angles-down {
     font-size: 20px;
 }
 
@@ -53,10 +53,12 @@ section.icecream .scroll_box i.fa-angles-down{
         bottom: 20px;
         opacity: 1;
     }
+
     50% {
         bottom: 10px;
         opacity: .5;
     }
+
     100% {
         bottom: 20px;
         opacity: 1;
@@ -89,7 +91,7 @@ section.new ol li p:nth-child(2) {
     margin-left: 50px;
 }
 
-section.new ol li p mark{
+section.new ol li p mark {
     color: red;
     border-radius: 5px;
     padding: 10px;
@@ -101,12 +103,13 @@ section.new ol li img {
     width: 500px;
 }
 
-@media (max-width:767.98px){
-    section.new ol{
+@media (max-width:767.98px) {
+    section.new {
         margin: 0 auto;
+        text-align: center;
     }
 
-    section.new ol li p{
+    section.new ol li p {
         display: block;
         font-size: 22px;
         margin-right: 0;
@@ -114,31 +117,32 @@ section.new ol li img {
 
     section.new ol li p:nth-child(2) {
         margin-left: 0;
+        text-align: center;
     }
 
-    section.new ol li p mark{
+    section.new ol li p mark {
         padding: 0;
     }
 
-    section.new ol li img{
+    section.new ol li img {
         width: 300px;
         height: 300px;
         object-fit: cover;
         display: block;
-        margin: 0 auto;
+        margin: 30px auto;
     }
 }
 
 /*------------- 部分商品圖 -------------*/
-section.ice_item{
+section.ice_item {
     margin-bottom: 10px;
 }
 
-section.ice_item h1{
+section.ice_item h1 {
     margin: 30px auto;
 }
 
-section.ice_item ul{
+section.ice_item ul {
     width: 90%;
     height: 500px;
     margin: 0 auto;
@@ -146,39 +150,39 @@ section.ice_item ul{
     margin-bottom: 50px;
 }
 
-section.ice_item ul li{
+section.ice_item ul li {
     background-size: cover;
     background-position: center center;
     outline: 5px solid brown;
     transition: all .5s linear;
 }
 
-section.ice_item ul li:first-child{
+section.ice_item ul li:first-child {
     background-image: url("../material/red-coffee.jpg");
     flex-grow: 1;
 }
 
-section.ice_item ul li:nth-child(2){
+section.ice_item ul li:nth-child(2) {
     background-image: url("../material/red-been.jpg");
     flex-grow: 1;
 }
 
-section.ice_item ul li:nth-child(3){
+section.ice_item ul li:nth-child(3) {
     background-image: url("../material/chocolate.jpg");
     flex-grow: 1;
 }
 
-section.ice_item ul li:nth-child(4){
+section.ice_item ul li:nth-child(4) {
     background-image: url("../material/lemon.jpg");
     flex-grow: 1;
 }
 
-section.ice_item ul li:last-child{
+section.ice_item ul li:last-child {
     background-image: url("../material/strawberry-snow.jpg");
     flex-grow: 1;
 }
 
-section.ice_item ul li:hover{
+section.ice_item ul li:hover {
     flex-grow: 3;
 }
 
@@ -196,7 +200,7 @@ section.ice_item ul li:hover{
 }
 
 /*------------- 回到頂端 -------------*/
-.back_to_top{
+.back_to_top {
     position: fixed;
     bottom: 10px;
     right: 10px;
@@ -213,24 +217,26 @@ section.ice_item ul li:hover{
     animation: top 1s linear infinite;
 }
 
-.back_to_top span{
+.back_to_top span {
     display: block;
     font-size: 20px;
     margin-top: 5px;
 }
 
-.back_to_top i.fa-angles-up{
+.back_to_top i.fa-angles-up {
     font-size: 20px;
 }
 
-@keyframes top{
-    0%{
+@keyframes top {
+    0% {
         bottom: 20px;
     }
-    50%{
+
+    50% {
         bottom: 30px;
     }
-    100%{
+
+    100% {
         bottom: 20px;
     }
 }
