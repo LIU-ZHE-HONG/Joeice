@@ -36,9 +36,20 @@
 </head>
 
 <body>
-    <!---------------- 頁首 ---------------->
+    <!------------- 頁首 ------------->
+    <!------------- 載入畫面 ------------->
+    <div class="loading_block">
+        <p class="para">
+            loading
+            <span class="dot -dot1"></span>
+            <span class="dot -dot2"></span>
+            <span class="dot -dot3"></span>
+        </p>
+        <div class="loading"></div>
+    </div>
+    
     <header>
-        <!---------------- 導覽列 ---------------->
+        <!------------- 導覽列 ------------->
         <nav class="navbar">
             <a href="index.html">
                 <img class="logo" src="material/logo.svg" alt="">
@@ -109,7 +120,7 @@
             </ul>
         </div>
         
-        <!---------------- 會員彈窗 ---------------->
+        <!------------- 會員彈窗 ------------->
         <div class="overlay" id="open">
             <div class="other"></div>
             <div class="overlay_box">
@@ -162,7 +173,7 @@
         </div>
     </header>
 
-    <!---------------- 麵包屑 ---------------->
+    <!------------- 麵包屑 ------------->
     <section>
         <div class="breadcrumb">
             <ol class="breadcrumb_list">
@@ -173,7 +184,7 @@
         </div>
     </section>
 
-    <!------------------ 冰淇淋專區(grid) ------------------>
+    <!--------------- 冰淇淋專區(grid) --------------->
     <div id="show_icecream">
         <h2 data-aos="zoom-out-down">冰淇淋專區</h2>
         <div class="grid-container">
@@ -234,7 +245,7 @@
         </div>
     </div>
 
-    <!---------------- 剉冰專區(bootstrap grid) ---------------->
+    <!------------- 剉冰專區(bootstrap grid) ------------->
     <div id="show_ice" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="3000">
         <h2>剉冰專區</h2>
         <div class="container">
@@ -279,7 +290,7 @@
         </div>
     </div>
 
-    <!---------------- owl輪播套件 ---------------->
+    <!------------- owl輪播套件 ------------->
     <section>
         <h2>哲宏推薦冰品</h2>
         <div class="owl-container">
@@ -303,13 +314,13 @@
         </div>
     </section>
 
-    <!---------------- 回到頂端按鈕 ---------------->
+    <!------------- 回到頂端按鈕 ------------->
     <div class="back_to_top">
         <span>TOP</span>
         <i class="fa-solid fa-angles-up"></i>
     </div>
 
-    <!---------------- 頁尾 ---------------->
+    <!------------- 頁尾 ------------->
     <footer>
         <h2>Joeice</h2>
         <div class="footer_content">
@@ -335,7 +346,7 @@
                 </div>
             </div>
 
-            <!---------------- 地圖 ---------------->
+            <!------------- 地圖 ------------->
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.1544533427546!2d121.49947571475944!3d25.062753643292666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a922a474b8e3%3A0x7f680abd4b3b71eb!2zMjQx5paw5YyX5biC5LiJ6YeN5Y2A5ZKM5bmz6KGXMzLomZ8!5e0!3m2!1szh-TW!2stw!4v1657293848301!5m2!1szh-TW!2stw"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
@@ -343,18 +354,18 @@
         </div>
         <p>本網站單純練習切版用，並無任何商業用途</p>
     </footer>
-    <!---------------- jquery ---------------->
+    <!------------- jquery ------------->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <!---------------- owl carousel ---------------->
+    <!------------- owl carousel ------------->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!---------------- AOS ---------------->    
+    <!------------- AOS ------------->    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!---------------- js ---------------->
+    <!------------- js ------------->
     <script src="js/main.js"></script>    
     <script>
         //AOS初始化

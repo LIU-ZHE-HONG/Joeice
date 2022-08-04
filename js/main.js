@@ -1,5 +1,10 @@
 "use strict";
 
+//============= 載入畫面 =============//
+$(window).on("load", function () {
+    $(".loading_block").remove();
+});
+
 //============= 漢堡按鈕 =============//
 $(function(){
     $(".hamburger_icon").on("click", function(e){
