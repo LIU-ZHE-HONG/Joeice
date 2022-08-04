@@ -9,6 +9,7 @@
     z-index: 3;
 }
 
+/*------------- 載入的文字 -------------*/
 .loading_block p.para {
     font-size: 30px;
     color: white;
@@ -21,12 +22,14 @@
     letter-spacing: 5px;
 }
 
+/*------------- 載入的點點 -------------*/
 .loading_block p.para span.dot {
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background-color: white;
+    vertical-align: middle;
     animation: twinkle 1s ease-in-out infinite alternate;
 }
 
@@ -40,13 +43,15 @@
 
 @keyframes twinkle {
     0% {
-        opacity: 0;
+        opacity: .1;
     }
+
     100% {
         opacity: 1;
     }
 }
 
+/*------------- 載入的圓圈 -------------*/
 .loading_block .loading::after{
     content: "";
     display: block;
@@ -68,6 +73,7 @@
     0% {
         transform: translate(-50%, -50%) rotate(0deg);
     }
+
     100% {
         transform: translate(-50%, -50%) rotate(360deg);
     }
