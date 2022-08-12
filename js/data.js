@@ -6,7 +6,7 @@ const iceItemsData = [
        img: '../material/chocolate.jpg',
        name: '黑巧克力碎焦糖咖啡冰淇淋',
        price: 120,
-       description:'1' 
+       description:'1'
     },
     {
         id: 'iceItem2',
