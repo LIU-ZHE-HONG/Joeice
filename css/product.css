@@ -54,11 +54,11 @@ section .breadcrumb ol.breadcrumb_list>li>a:hover {
 }
 
 /*------------- grid -------------*/
-.ice h2 {
+#show_icecream h2 {
     margin-bottom: 20px;
 }
 
-.ice .grid-container {
+#show_icecream .grid-container {
     display: grid;
     grid-template-columns: repeat(3, auto);
     justify-content: space-evenly;
@@ -66,13 +66,13 @@ section .breadcrumb ol.breadcrumb_list>li>a:hover {
     margin-bottom: 50px;
 }
 
-.ice .grid-container .grid_item p{
+#show_icecream .grid-container .grid_item p{
     text-align: center;
     margin-bottom: 20px;
     font-size: 20px;
 }
 
-.ice .grid-container .grid_item a img {
+#show_icecream .grid-container .grid_item a img {
     cursor: pointer;
     display: block;
     width: 330px;
@@ -83,35 +83,35 @@ section .breadcrumb ol.breadcrumb_list>li>a:hover {
 /*grid RWD*/
 @media (min-width:576px) and (max-width:767.98px),
 (min-width:768px) and (max-width:991.98px) {
-    .ice .grid-container {
+    #show_icecream .grid-container {
         grid-template-columns: repeat(2, auto);
         gap: 30px;
     }
 
-    .ice .grid-container .grid_item {
+    #show_icecream .grid-container .grid_item {
         padding: 10px;
     }
 }
 
 @media (max-width:575.98px) {
-    .ice .grid-container {
+    #show_icecream .grid-container {
         grid-template-columns: repeat(1, auto);
         gap: 0;
     }
 
-    .ice .grid-container .grid_item {
+    #show_icecream .grid-container .grid_item {
         padding: 30px;
     }
 }
 
 /*------------- bootstrap grid -------------*/
-.ice .container .row .pic p{
+#show_ice .container .row .pic p{
     text-align: center;
     font-size: 20px;
     margin-top: 20px;
 }
 
-.ice .container .row .pic a img {
+#show_ice .container .row .pic a img {
     cursor: pointer;
     display: block;
     width: 330px;

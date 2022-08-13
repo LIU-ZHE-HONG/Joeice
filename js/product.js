@@ -1,5 +1,5 @@
-let icecream = document.querySelector(".ice .grid-container");
-let cut_ice = document.querySelector(".ice .container .row");
+let icecream = document.querySelector("#show_icecream .grid-container");
+let cut_ice = document.querySelector("#show_ice .container .row");
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let generateIce = () => {
@@ -13,7 +13,7 @@ let generateIce = () => {
             <div id=product-id-${id} class="grid_item" data-aos="zoom-in-${dir}">
                 <p>${name}</p>
                 <a href="product_details/product_details.html"> 
-                    <img src=../material/${img} alt="" onclick="saveImg(${id})">
+                    <img src="../material/${img}" alt="" onclick="saveImg(${id})">
                 </a>
             </div>
             `;
@@ -29,7 +29,7 @@ let generateIce = () => {
             <div id=product-id-${id} class="pic col-12 col-sm-6 col-md-4">
                 <p>${name}</p>
                 <a href="product_details/product_details.html">
-                    <img src=../material/${img} alt="" onclick="saveImg(${id})">
+                    <img src="../material/${img}" alt="" onclick="saveImg(${id})">
                 </a>
             </div>
             `;
